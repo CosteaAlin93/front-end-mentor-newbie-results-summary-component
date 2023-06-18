@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;0,800;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Hanken Grotesk', 'sans'],
+            },
+            colors: {
+              Lightred: 'hsl(0, 100%, 67%)',
+              Orangeyellow: 'hsl(39, 100%, 56%)',
+              Greenteal: 'hsl(166, 100%, 37%)',
+              Cobaltblue: 'hsl(234, 85%, 45%)',
+              //
+              Lightslatebluebackground: 'hsl(252, 100%, 67%)',
+              Lightroyalbluebackground: 'hsl(241, 81%, 54%)',
+              Violetbluecircle: 'hsla(256, 72%, 46%, 1)',
+              Persianbluecircle: 'hsla(241, 72%, 46%, 0)',
+              //
+              White: 'hsl(0, 0%, 100%)',
+              Paleblue: 'hsl(221, 100%, 96%)',
+              Lightlavender: 'hsl(241, 100%, 89%)',
+              Darkgrayblue: 'hsl(224, 30%, 27%)',
+            },
+          },
+        },
+      };
+    </script>
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <!-- Whole screen div -->
+    <div class="min-h-screen flex justify-center items-center bg-Paleblue">
+      <!-- Card div -->
+      <div
+        class="max-w-[375px] flex flex-col shadow-xl bg-White font-sans md:flex-row md:rounded-[32px] md:max-w-[1440px]"
+      >
+        <!-- ======================================== -->
+        <!-- Left side div -->
+        <div
+          class="max-w-[375px] rounded-b-[32px] bg-gradient-to-b from-Lightslatebluebackground to-Lightroyalbluebackground flex flex-col items-center rounded-b-[32px] md:rounded-[32px]"
+        >
+          <!-- Your Result -->
+          <h2
+            class="text-lg font-semibold text-Lightlavender text-opacity-90 pt-5 pb-5 md:pt-10 md:pb-8 md:text-2xl"
+          >
+            Your Result
+          </h2>
+          <!-- Score -->
+          <div
+            class="w-36 h-36 flex flex-col justify-center items-center space-y-2 rounded-full bg-gradient-to-t from-Persianbluecircle to-Violetbluecircle md:w-48 md:h-48"
+          >
+            <h1 class="text-5xl font-bold text-White md:text-7xl">76</h1>
+            <h3 class="text-md font-bold text-Lightlavender text-opacity-50">of 100</h3>
+          </div>
+          <!-- Info -->
+          <div class="text-center space-y-2">
+            <h2 class="text-2xl font-semibold text-White pt-6 md:font-semibold md:pb-4 md:pt-7 md:text-3xl">
+              Great
+            </h2>
+            <p
+              class="text-[16px] font-medium text-Lightlavender pb-10 px-12 leading-5 md:pb-14 md:leading-6 md:text-lg md:px-14"
+            >
+              You scored higher than 65% of the people who have taken these tests.
+            </p>
+          </div>
+        </div>
+        <!-- ======================================== -->
+        <!-- Right side div -->
+        <div class="flex flex-col px-6 w-[375px] bg-White md:rounded-r-[32px] pl-8 md:pl-10">
+          <!-- Heading -->
+          <h2
+            class="text-lg font-semibold text-Darkgrayblue text-opacity-90 py-6 md:pb-5 md:pt-10 md:text-2xl"
+          >
+            Summary
+          </h2>
+          <!-- List of attributes -->
+          <ul class="space-y-4 w-full">
+            <!-- Reaction -->
+            <li class="flex justify-between p-[15px] bg-Lightred bg-opacity-10 rounded-xl">
+              <div class="flex flex-row space-x-2 justify-center items-center">
+                <img class="w-5 h-5 md:w-6 md:h-6" src="./assets/images/icon-reaction.svg" alt="Reaction" />
+                <h2 class="font-medium text-[16px] text-Lightred text-opacity-80">Reaction</h2>
+              </div>
+              <div class="flex flex-row justify-center items-center space-x-2">
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-90">80</p>
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-50">/</p>
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-50">100</p>
+              </div>
+            </li>
+            <!-- Memory -->
+            <li class="flex justify-between p-[15px] bg-Orangeyellow bg-opacity-10 rounded-xl">
+              <div class="flex flex-row space-x-2 justify-center items-center">
+                <img class="w-5 h-5 md:w-6 md:h-6" src="./assets/images/icon-memory.svg" alt="Memory" />
+                <h2 class="font-medium text-[16px] text-Orangeyellow text-opacity-80">Memory</h2>
+              </div>
+              <div class="flex flex-row justify-center items-center space-x-2">
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-90">92</p>
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-50">/</p>
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-50">100</p>
+              </div>
+            </li>
+            <!-- Verbal -->
+            <li class="flex justify-between p-[15px] bg-Greenteal bg-opacity-10 rounded-xl">
+              <div class="flex flex-row space-x-2 justify-center items-center">
+                <img class="w-5 h-5 md:w-6 md:h-6" src="./assets/images/icon-verbal.svg" alt="Verbal" />
+                <h2 class="font-medium text-[16px] text-Greenteal text-opacity-80">Verbal</h2>
+              </div>
+              <div class="flex flex-row justify-center items-center space-x-2">
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-90">61</p>
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-50">/</p>
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-50">100</p>
+              </div>
+            </li>
+            <!-- Visual -->
+            <li class="flex justify-between p-[15px] bg-Cobaltblue bg-opacity-10 rounded-xl">
+              <div class="flex flex-row space-x-2 justify-center items-center">
+                <img class="w-5 h-5 md:w-6 md:h-6" src="./assets/images/icon-visual.svg" alt="Visual" />
+                <h2 class="font-medium text-[16px] text-Cobaltblue text-opacity-80">Visual</h2>
+              </div>
+              <div class="flex flex-row justify-center items-center space-x-2">
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-90">72</p>
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-50">/</p>
+                <p class="text-md font-semibold text-Darkgrayblue text-opacity-50">100</p>
+              </div>
+            </li>
+          </ul>
+          <!-- Button -->
+          <button
+            class="rounded-full bg-Darkgrayblue p-4 font-bold text-Paleblue mt-6 mb-6 md:text-lg md:mt-10 md:mb-8"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
